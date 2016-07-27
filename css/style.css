@@ -1,0 +1,370 @@
+@font-face {
+    font-family: 'open-sans';
+    src: url('fonts/opensans-bold-webfont.eot');
+    src: url('fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-bold-webfont.woff2') format('woff2'),
+         url('fonts/opensans-bold-webfont.woff') format('woff'),
+         url('fonts/opensans-bold-webfont.ttf') format('truetype'),
+         url('fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url('fonts/opensans-bolditalic-webfont.eot');
+    src: url('fonts/opensans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-bolditalic-webfont.woff2') format('woff2'),
+         url('fonts/opensans-bolditalic-webfont.woff') format('woff'),
+         url('fonts/opensans-bolditalic-webfont.ttf') format('truetype'),
+         url('fonts/opensans-bolditalic-webfont.svg#open_sansbold_italic') format('svg');
+    font-weight: ; bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'open_sans';
+    src: url('fonts/opensans-light-webfont.eot');
+    src: url('fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-light-webfont.woff2') format('woff2'),
+         url('fonts/opensans-light-webfont.woff') format('woff'),
+         url('fonts/opensans-light-webfont.ttf') format('truetype'),
+         url('fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sans';
+    src: url('fonts/opensans-lightitalic-webfont.eot');
+    src: url('fonts/opensans-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-lightitalic-webfont.woff2') format('woff2'),
+         url('fonts/opensans-lightitalic-webfont.woff') format('woff'),
+         url('fonts/opensans-lightitalic-webfont.ttf') format('truetype'),
+         url('fonts/opensans-lightitalic-webfont.svg#open_sanslight_italic') format('svg');
+    font-weight: light;
+    font-style: italic;
+
+}
+h1 {
+    color: white;
+}
+body {
+    background-color: blue;
+}
+div {
+    display: block;
+}
+.footer p {
+    color: white;
+}
+
+
+              b,
+              b *,
+              strong,
+              strong * {
+                 font-style: normal;
+                 font-weight: 700!important
+              }
+              em,
+              em *,
+              i,
+              i * {
+                 font-style: italic
+              }
+              a img,
+              fieldset,
+              img {
+                 border: 0
+              }
+              img {
+                 height: auto;
+                 max-width: 100%
+              }
+              html {
+                 font-size: 16px
+              }
+              body {
+                 background-color: #000;
+                 color: #fff
+              }
+              body,
+              button,
+              input {
+                 font-family: Open Sans, sans-serif;
+                 font-size: 8px;
+                 font-size: .8rem
+              }
+              @media (min-width: 600px) {
+                 body,
+                 button,
+                 input {
+                     font-size: 9px;
+                     font-size: .9rem
+                 }
+              }
+            /*  @media */(min-width: 1000px) {
+                 body,
+                 button,
+                 input {
+                     font-size: 10px;
+                     font-size: 1rem
+                 }
+              }
+              input {
+                 border: none;
+                 font-family: Open Sans, serif;
+                 border-bottom: 1px solid #dbdbdb ;
+
+                 padding: .33333rem 2.5rem .33333rem 1rem
+              }
+              input:focus {
+                 border-bottom-color: #fff
+              }
+              input:-webkit-autofill {
+                 -webkit-box-shadow: 0 0 0 1000px #000 inset;
+                 -webkit-text-fill-color: #fff!important
+              }
+              button {
+                 border: 0;
+                 background-color: #e2231a ;
+                 color: #fff;
+                 cursor: pointer;
+                 display: block;
+                 font-weight: 700;
+                 padding: .5rem 3rem;
+                 text-transform: uppercase
+              }
+
+
+              button:hover {
+                 background-color: #b41c15
+              }
+              .container {
+                 margin: 0 auto;
+                 width: 100%;
+                 max-width: 1600px
+              }
+              .screen-reader {
+                 border: 0;
+                 clip: rect(0 0 0 0);
+                 height: 1px;
+                 margin: -1px;
+                 overflow: hidden;
+                 padding: 0;
+                 position: absolute;
+                 width: 1px
+              }
+              .site-header {
+                 -webkit-align-content: center;
+                 -ms-flex-line-pack: center;
+                 align-content: center;
+                 display: -webkit-flex;
+                 display: -ms-flexbox;
+                 display: flex;
+                 -webkit-flex-wrap: wrap;
+                 -ms-flex-wrap: wrap;
+                 flex-wrap: wrap;
+                 height: 85vh;
+                 -webkit-justify-content: center;
+                 -ms-flex-pack: center;
+                 justify-content: center;
+                 padding: 2rem
+              }
+              /*@media*/ (min-width: 600px) {
+                 .site-header {
+                     -webkit-align-items: center;
+                     -ms-flex-align: center;
+                     -ms-grid-row-align: center;
+                     align-items: center;
+                     width: 100%
+                 }
+              }
+              /@media  (min-width: 1000px) {
+                 .site-header {
+                     -webkit-justify-content: flex-start;
+                     -ms-flex-pack: start;
+                     justify-content: flex-start
+                 }
+                 .site-header.container {
+                     margin-left: 0;
+                     margin-right: 0
+                 }
+              }
+            /*  @media*/ (min-height: 400px) {
+                 .site-header {
+                     height: 90vh
+                 }
+              }
+              .logo,
+              .search-form {
+                 display: block;
+                 width: 300px
+              }
+            /*  @media */(min-width: 600px) {
+                 .logo,
+                 .search-form {
+                     max-width: 250px
+                 }
+              }
+              /*@media */(min-width: 1000px) {
+                 .logo,
+                 .search-form {
+                     max-width: 300px
+                 }
+              }
+              .logo {
+                 margin-bottom: 1rem;
+                 text-align: center;
+                 transition: all .5s .5s ease-out
+              }
+              /*@media*/ (min-width: 600px) {
+                 .logo {
+                     -webkit-flex: 0 1 25%;
+                     -ms-flex: 0 1 25%;
+                     flex: 0 1 25%;
+                     margin: 0 1rem 0 0;
+                     text-align: left
+                 }
+              }
+              /*@media*/ (min-width: 600px) {
+                 .search-form {
+                     -webkit-flex: 0 1 75%;
+                     -ms-flex: 0 1 75%;
+                     flex: 0 1 75%
+                 }
+              }
+              .search-form input {
+                 background-color: transparent;
+                 color: #fff;
+                 font-size: 11px;
+                 font-size: 1.1rem;
+                 padding-left: 2rem;
+                 width: 100%
+              }
+              .search-form select {
+                 font-size: 20px;
+                 font-size: 2rem
+              }
+              .search-form-inner {
+                 display: inline-block;
+                 position: relative;
+                 text-align: center;
+                 margin-bottom: 1rem;
+                 width: 100%
+              }
+              /*@media*/ (min-width: 600px) {
+                 .search-form-inner {
+                     text-align: left
+                 }
+              }
+              .search-form-inner p {
+                 margin-bottom: 1rem
+              }
+              .story-grid {
+                 margin: 0 auto;
+                 width: 100%
+              }
+              .ajax-loader {
+                 display: none;
+                 height: 38px;
+                 margin: 1rem auto;
+                 width: 38px
+              }
+              /*@media*/ (min-width: 1000px) {
+                 .ajax-loader {
+                     margin-top: 1rem
+                 }
+              }
+              .stories ul {
+                 display: -webkit-flex;
+                 display: -ms-flexbox;
+                 display: flex;
+                 -webkit-flex-wrap: wrap;
+                 -ms-flex-wrap: wrap;
+                 flex-wrap: wrap;
+                 -webkit-justify-content: space-around;
+                 -ms-flex-pack: distribute;
+                 justify-content: space-around;
+                 margin-bottom: 2rem
+              }
+              .stories li {
+                 -webkit-flex: 0 1 100%;
+                 -ms-flex: 0 1 100%;
+                 flex: 0 1 100%;
+                 max-width: 100%
+              }
+              .stories li .inner-item-wrapper {
+                 position: relative
+              }
+              /*@media*/ (min-width: 480px) {
+                 .stories li {
+                     -webkit-flex: 0 1 50%;
+                     -ms-flex: 0 1 50%;
+                     flex: 0 1 50%;
+                     max-width: 50%
+                 }
+              }
+
+              /*@media*/ (min-width: 1000px) {
+                 .stories li {
+                     -webkit-flex: 0 1 25%;
+                     -ms-flex: 0 1 25%;
+                     flex: 0 1 25%;
+                     max-width: 25%
+                 }
+              }
+              .stories .article {
+                 display: block;
+                 width: 100%;
+                 height: 420px;
+                 background-position: 50%;
+                 background-size: cover
+              }
+              .story-meta {
+                 background: rgba(0, 0, 0, .6);
+                 bottom: 0;
+                 color: #fff;
+                 display: -webkit-flex;
+                 display: -ms-flexbox;
+                 display: flex;
+                 font-size: 10px;
+                 font-size: 1rem;
+                 padding: .5rem;
+                 position: absolute;
+                 width: 100%
+              }
+              .story-meta p {
+                 line-height: 1.5rem
+              }
+              .feedback {
+                 font-style: italic;
+                 margin: 1rem 0;
+                 text-align: center
+              }
+              .site-footer {
+                 color: #c2c2c2 ;
+                 font-size: 9px;
+                 font-size: .9rem;
+                 height: 15vh;
+                 text-align: center;
+                 padding: 0 2rem
+              }
+              /*@media*/ (min-width: 1000px) {
+                 .site-footer {
+                     text-align: left
+                 }
+              }
+              /*@media*/ (min-height: 400px) {
+                 .site-footer {
+                     height: 10vh
+                 }
+              }
+              .copyright span {
+                 text-transform: uppercase
+
+}
