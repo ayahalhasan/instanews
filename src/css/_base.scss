@@ -1,0 +1,25 @@
+
+// colors
+$background-color: #000;
+$font-color: #fff;
+$footer-color: #c2c2c2;
+
+
+html, p, a {
+  font-size: 16px;
+  font-family: 'open_sans', sans-serif;
+  color: $font-color;
+  .uppercase {
+    text-transform: uppercase;
+  }
+}
+
+body {
+  color: $font-color;
+  background: $background-color;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}

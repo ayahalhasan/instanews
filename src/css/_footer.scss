@@ -1,0 +1,14 @@
+footer {
+  height: 15vh;
+  color: $footer-color;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  @include desktop {
+    justify-content: flex-start;
+    margin-left: 5%;
+  }
+  
+}
