@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
   // Function that calls the NYT API
-  var $select = $('select'); // Dropdown Select manue 
+  var $select = $('select'); // Dropdown Select manue
   $select.on('change', function (event) {
     event.preventDefault();
     var $section = $('.stories'); // HTML element where we will insart articles
@@ -32,7 +32,7 @@ $(document).ready(function () {
         var imgUrl = value.multimedia[4].url;
         var abstract = value.abstract;
 
-        articles += '<article>\n                    <a href="' + link + '">Link ' + (index + 1) + ';\n                      <div class="inner" style="background: url(' + imgUrl + '); background-size: cover">\n                        <p>' + abstract + '</p>\n                      </div>\n                    </a>\n                   </article>';
+        articles += '<article>\n                    <a href="' + link + '">\n                      <div class="inner" style="background: url(' + imgUrl + '); background-size: cover">\n                        <p>' + abstract + '</p>\n                      </div>\n                    </a>\n                   </article>';
       });
 
       $section.append(articles);

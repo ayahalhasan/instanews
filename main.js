@@ -16,7 +16,7 @@ $(document).ready(function() {
             url: url,
             method: 'GET',
         }).done(function(data) {
-            console.log(result);
+            // console.log(result);
 
             articaleData = data.result;
             nytItems = '';
@@ -36,7 +36,7 @@ $(document).ready(function() {
                 articleLink = value.url;
 
                 nytItems += '<li>';
-                nytItems +=  '<a herf='+ articaleLink + '"target="_blank">';
+                nytItems +=  '<a herf='+ articaleLink'>';
                 nytItems +=     '<div class="artical" style="background-image:url('+articaleImageUrl+')">';
                 nytItems += '<div class="photo-meta">';
                 nytItems += '<p>' + (articaleCaption || "This story has no description.") + '</p>';

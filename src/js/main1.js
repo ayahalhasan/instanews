@@ -1,6 +1,6 @@
 $(document).ready(function(){
   // Function that calls the NYT API
-  var $select = $('select'); // Dropdown Select manue 
+  var $select = $('select'); // Dropdown Select manue
   $select.on('change', function(event) {
   event.preventDefault();
   var $section = $('.stories'); // HTML element where we will insart articles
@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 
       articles += `<article>
-                    <a href="${link}">Link ${index +1};
+                    <a href="${link}">
                       <div class="inner" style="background: url(${imgUrl}); background-size: cover">
                         <p>${abstract}</p>
                       </div>
