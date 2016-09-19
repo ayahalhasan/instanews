@@ -32,7 +32,7 @@ $(document).ready(function () {
         var imgUrl = value.multimedia[4].url;
         var abstract = value.abstract;
 
-        articles += '<article>\n                    <a href="' + link + '">\n                      <div class="inner" style="background: url(' + imgUrl + '); background-size: cover">\n                        <p>' + abstract + '</p>\n                      </div>\n                    </a>\n                   </article>';
+        articles += '<article>\n                    <a href="' + link + '">\n                      <div class="inner" style="background: url(' + imgUrl + '); background-size: cover">\n                        <div class="meta">\n                          <p>' + abstract + '</p>\n                        </div>\n                      </div>\n                    </a>\n                   </article>';
       });
 
       $section.append(articles);

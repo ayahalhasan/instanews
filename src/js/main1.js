@@ -36,7 +36,9 @@ $(document).ready(function(){
       articles += `<article>
                     <a href="${link}">
                       <div class="inner" style="background: url(${imgUrl}); background-size: cover">
-                        <p>${abstract}</p>
+                        <div class="meta">
+                          <p>${abstract}</p>
+                        </div>
                       </div>
                     </a>
                    </article>`
