@@ -31,26 +31,48 @@ $(document).ready(function(){
       let link = value.url;
       let imgUrl = value.multimedia[4].url;
       let abstract = value.abstract;
+      let title = value.title;
 
-
-      articles += `<article>
-                    <a href="${link}">
+// ES2015, append articles
+      articles += `<articale>
+                    <a class="font" href="${link}">
                       <div class="inner" style="background: url(${imgUrl}); background-size: cover">
-                        <div class="meta">
-                          <p>${abstract}</p>
-                        </div>
+                        <h3 class='title'> ${title}</h3>
+                          <div class="meta">
+                            <p>${abstract}</p>
+                          </div>
                       </div>
                     </a>
-                   </article>`
+                   </articale>`
     });
 
     $section.append(articles);
   })
-  .always(function(){
+  .fail(function(err) {
+		  $('.stories-grid').append('<p class="no-stories">Sorry! There was a problem, please try again.</p>');
+		})
+    .always(function(){
 
+    });
   });
 
+});
 
-  });
+//position change for header
+$(function(){
+	$('#sections').on('change', function(event) {
+		$("header").animate({
+    		opacity: 0,
+    		width: "0",
+    	},800, "linear", function() {
 
+  			$(this).css({'left':'0','opacity':'1','width':'100%'});
+  			$( this ).removeClass( "head" ).addClass( "head-selected");
+		})
+
+		$( ".wrapper-logo" ).removeClass( ".wrapper-logo" ).addClass( "wrapper-logo-selected" );
+
+		$( ".logo-img" ).removeClass( ".logo-img" ).addClass( "logo-img-selected" );
+
+	});
 });

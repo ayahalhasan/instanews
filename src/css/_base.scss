@@ -1,26 +1,53 @@
-
-// colors
+/*-----Colors --------*/
 $background-color: #000;
 $font-color: #fff;
 $footer-color: #c2c2c2;
 
+/*----- Fonts --------*/
+$fonts:	'open-sans', sans-serif;
 
-html, p, a {
-  font-size: 16px;
-  font-family: 'open_sans', sans-serif;
-  color: $font-color;
-  
-  .uppercase {
-    text-transform: uppercase;
-  }
+/*----- Global resets --------*/
+html {
+	font-size: 16px;
+}
+
+img {
+	width:100%;
+	height: auto;
 }
 
 body {
-  color: $font-color;
-  background: $background-color;
+	background-color:$background-color;
+	color: $font-color;
+	font-family: $fonts;
+
+	.wrapper {
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
 }
 
+/*---- other resets -----*/
 * {
-  // box-sizing: border-box;
-  outline: none;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+p {
+	font-family: $fonts;
+	color: $font-color;
+	font-style: none;
+	text-align: center;
 }

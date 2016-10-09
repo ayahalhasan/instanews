@@ -1,103 +1,164 @@
-section {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  width: 100vw;
-  padding: 0;
-  margin: 0;
+/*---------- Stories Section ----------*/
 
-  .search {
-    font-style: italic;
-    padding: 50px;
+.articale-list {
+  width: 100%;
+
+  .ajax-loader {
+    display: none;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 50px;
+    height: auto;
   }
 
-  img {
-    height: 100%;
-    width:100%;
-  }
-}
-
-article{
-  max-width: 25%;
-  position: relative;
-}
-
-.stories {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-bottom: 2rem;
-  
-  .inner {
+   .inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: block;
     height: 420px;
-    flex: 0 1 25%;
     background-position: 50%;
     background-size: cover;
 
-  }
-}
+     &:nth-child(n+13) {
+      display: none;
+    }
 
-.meta  {
-  color: #fff;
-  background: rgba(0,0,0,.6);
-  display: flex;
-  font-size: 1rem;
-  padding: .5rem;
-  width: 100%;
-  height: 100px;
-  p {
-    line-height: 1.5rem;
+    &:hover .meta{
+      visibility: visible;
+      animation-duration: 2s;
+      animation-name: bounceingUp;
+    }
+
+   .title {
+      margin-top: -15px;
+      height: auto;
+      text-shadow: 2px 2px rgba(50, 50, 50, 0.8);
+      background-color: rgba(20, 20, 20, 0.5);
+      padding: 30px 10px 20px 10px;
+      letter-spacing: 1px;
+    }
+
+   .meta {
+      position: relative;
+      background-color: rgba(0, 0, 0, 0.5);
+      font-size: 1.1rem;
+      visibility: hidden;
+      position: absolute;
+      bottom: -25px;
+      width: 100%;
+      height: 230px;
+      padding: 20px 5px;
+
+       &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+   } // .meta
+ } // .inner
+} // .articale-list
+
+
+/*---------media queries for desktop --------*/
+
+@include desktop {
+
+  .articale-list {
+    width: 25%;
+
+    .stories {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+
+      articale {
+        -webkit-flex: 0 1 25%;
+        flex: 0 1 25%;
+        max-width: 25%;
+      }
+
+      .inner {
+        display: block;
+        width: 100%;
+        height: 420px;
+        background-position: 50%;
+        background-size: cover;
+      }
+    }// .stories
+  } //.articale-list
+
+  /*-------- Stories Section-----*/
+
+    .articale-list {
+     .news {
+       flex: 1 0 25%;
+       }
+     }
+    .site-header {
+        justify-content: flex-start;
+       }
+    .wrapper-logo{
+      margin-left: 30px;
+      margin-right: -50px;
+    }
+
+    .logo-img {
+      width: 25%;
+    }
  }
- a {
-   position: absolute;
-   bottom: 0;
-   height: 100%;
+
+ /*---------media queries for tablet --------*/
+
+ @include tablet {
+ /*-------- Stories Section -------*/
+ .articale-list {
+   width: 100%;
+
+   .stories {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     margin-bottom: 2rem;
+
+    //  articale {
+    //    -webkit-flex: 0 1 50%;
+    //    flex: 0 1 50%;
+    //    max-width: 50%;
+    //  }
+    }
+     .stories-grid {
+       overflow: hidden;
+       flex-direction: row;
+       flex-wrap: wrap;
+     }
+
+     .inner {
+       display: block;
+       width: 100%;
+       height: 420px;
+       background-position: 50%;
+       background-size: cover;
+
+         .meta {
+           font-size: 1rem;
+         }
+       }
+     } //.articale-list
+
+    .head-selected {
+       flex-direction: row;
+       height: auto;
+       padding: 10px;
+     }
+
+     .wrapper-logo-selected {
+       width: 300px;
+       margin-left: -350px;
+     }
+
+     .logo-img-selected {
+       width: 60%;
+       margin-top: 10px;
+       margin-left: 100px;
+     }
  }
- @include desktop {
-   flex-basis: 25%;
- }
-
-}
-
-.ajax-loader {
-  text-align: center;
-  width: 50%;
-  margin: 0 auto;
-  display: none;
-
-  img {
-    width: 15%;
-    height: 15%;
-  }
-}
-
-.article-list {
-  flex-basis: 100%;
-  overflow: hidden;
-
-  @include tablet {
-    flex-basis: 33.3333333%;
-
-  }
-
-  @include desktop {
-    flex-basis: 25%;
-  }
-}
-
-.search-inner {
-  position: relative;
-  height: 100vw;
-  overflow: hidden;
-
-  @include tablet {
-    height: 300px;
-  }
-
-  @include desktop {
-    height: 400px;
-  }
-
-}

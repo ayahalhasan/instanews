@@ -1,33 +1,86 @@
+/*---------- Header Styles ----------*/
+.site-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height:85vh;
+	padding: 10px;
+	margin-top:-30px;
 
+	.wrapper-logo {
+		width: 360px;
+		animation-duration: 6s;
+		animation-name: bounceingUp;
+		animation-timing-function: ease-in-out;
 
-.containt {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1600px;
+		.logo-img {
+		  width: 60%;
+		  height: auto;
+		}
+	}
 }
+
+/*--------- Search Form -------------*/
+.search {
+	font-size: .8rem;
+	margin-left: 100px;
+}
+
+/*---------media queries for tablet --------*/
+@include tablet {
 
 .site-header {
-  align-content: center;
-  display: flex;
-  flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-in-between;
+	height: 85vh;
+	padding: 10px;
+
+	.wrapper-logo-selected {
+		width: 25%;
+	}
+
+		.wrapper-logo {
+			margin-left: -30px;
+			margin-right: -140px;
+			margin-top: 30px;
+
+			.logo-img {
+				width: 60%;
+				height: auto;
+			}
+		}
+	}
+}
+
+.search {
+	margin-left: 200px;
+	font-size: 1rem;
 }
 
 
-.reader {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  width: 1px;
-}
+/*---------media queries 1024 px--------*/
 
-.logo {
-  margin-bottom: 1rem;
-  text-align: center;
-  display: block;
-  width: 300px;
-  transition: all .5s .5s ease-out;
-}
+@include desktop {
+
+  .site-header {
+    justify-content: flex-start;
+    height: 90vh;
+    padding: 0;
+
+		.wrapper-logo-selected {
+			width: 200px;
+		}
+
+		.wrapper-logo {
+      margin-left: 0;
+    }
+  }
+
+  .articale-list
+	.inner {
+    flex: 1 0 25%;
+   	}
+ 	}
